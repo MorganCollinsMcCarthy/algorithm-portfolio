@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
+
 	/**
 	 * Implementation of various sorting algorithms 
 	 * that includes a framework for testing with various input array sizes and over
@@ -13,6 +14,14 @@ public class Sorts {
 	static final int CUTOFF = 10;
 	
 	public static void main(String args[]) {
+		Sorts test = new Sorts();
+		int[] s = {2,1,5,6,7,8};
+		printArray(s);
+		
+		
+		test.mergeSort(s);
+		printArray(s);
+		
 		//System.out.println("running main");
 //		//use an integer variable to decide which sorting algorithm to use below
 //		int type = 0; 
@@ -87,12 +96,62 @@ public class Sorts {
 		}
 		printArray(arr);
     }
+    // ***************************** Merge Sort *****************************
+    public void mergeSort(int[] a) {
+    	int low=0;
+        int i;
+        int high = a.length;
+        int mid = (high+low)/2;
+        if(a.length<2)
+        {
+            return;
+        }
+        else
+        {
+            int[] left = new int[mid];
+            int[] right = new int[high-mid];
+            for(i = 0 ; i < mid; i++)
+            	left[i]=a[i];
+            for(int j = 0 ; j < high-mid; j++,i++)
+                right[j]=a[i];
+            mergeSort(left);
+            mergeSort(right);
+            merge(left,right,a);
+        }
+    }
+    
+    public int[] merge(int[] a, int[] b,int[] s) {
+    	int i=0,j=0,k=0;
+		//repeat while both arrays have elements in them
+    	
+    	while(i<a.length && j<b.length) {
+    		if(a[i]< b[j]) {
+    			s[k]=a[i];
+    			i++;
+    			k++;
+    		}
+    		else {
+    			s[k]=b[j];
+    			j++;
+    			k++;
+    		}	
+    	}
+    	while(i<a.length) {
+    		s[k]=a[i];
+    		i++;
+    		k++;
+    	}
+    	
+    	while(j<b.length) {
+    		s[k]=b[j];
+    		j++;
+    		k++;
+    	}
+		return s;
+    }
     
     
-    
-    //insert your MergeSort implementation here
-    
- // ***************************** Quick Sorts *****************************
+    // ***************************** Quick Sorts *****************************
     
     //advanced quick
     public void advancedQuickSort(int array[],int low,int high) {
