@@ -7,5 +7,6 @@
 	<classpathentry kind="src" path="lab4-elementary-sorting"/>
 	<classpathentry kind="src" path="lab6-advancted-sortingII"/>
 	<classpathentry kind="src" path="lab7-substring-search"/>
+	<classpathentry kind="src" path="lab8-tries"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
