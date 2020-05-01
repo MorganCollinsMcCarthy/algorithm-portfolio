@@ -9,7 +9,7 @@ public class RunLengthEncoding {
 		String txt = input.readString();
 		int num = 0;
 		
-		//for loop szoe of string
+		//for loop size of string
 		int size = txt.length();
 		for (int i = 0; i < size; i++) { //here we are adding a new letter to the string and count counting how many times it occurs in a row
 			num = 1;
