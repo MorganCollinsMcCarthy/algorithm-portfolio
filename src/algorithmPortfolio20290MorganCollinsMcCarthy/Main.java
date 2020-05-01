@@ -51,7 +51,17 @@ public class Main {
 		test.quickSort(arr, 0, arr.length - 1);
 		if (Sorts.isSorted(arr))
 			System.out.println("Quick Sort Working");
-
+		
+		arr = newArray();
+		test.advancedQuickSort(arr, 0, arr.length - 1);
+		if (Sorts.isSorted(arr))
+			System.out.println("Advanced Quick Sort Working");
+		
+		arr = newArray();
+		test.advancedMerge(arr);
+		if (Sorts.isSorted(arr))
+			System.out.println("Advanced Merge Sort Working");
+		
 		// reading from file
 		String txt = "";
 		try {
@@ -100,15 +110,17 @@ public class Main {
 
 		// ********Performance*******
 		// Here we can test the runtime of each algorithm.
-//		testRussianAlgorithm();
-//		testFib();
-//		sortTest(0, "Selection Sort");
-//		sortTest(1, "Insertion Sort");
-//		sortTest(2, "Merge Sort");
-//		sortTest(3, "Quick Sort");
-//		sortTest(4, "Advanced Quick Sort");
-//		testSearch();
-//		testKMPSearch();
+
+		testRussianAlgorithm();
+		testFib();
+		sortTest(0, "Selection Sort");
+		sortTest(1, "Insertion Sort");
+		sortTest(2, "Merge Sort");
+		sortTest(3, "Quick Sort");
+		sortTest(4, "Advanced Quick Sort");
+		sortTest(5, "Advanced Merge Sort");
+		testSearch();
+		testKMPSearch();
 	}
 
 	public static int[] newArray() {
@@ -271,7 +283,9 @@ public class Main {
 				case 4:
 					test.advancedQuickSort(nums, 0, inputSize - 1);
 					break;
-
+				case 5:
+					test.advancedMerge(nums);
+					break;
 				default:
 					System.err.printf("\nBad sort ID '%d'", type);
 					System.exit(-2);

@@ -1,4 +1,5 @@
 package algorithmPortfolio20290MorganCollinsMcCarthy.Lab4and5and6;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -14,14 +15,13 @@ public class Sorts {
 
 	// ********print helper class*****
 	// Prints the input array
-	
+
 	public void print(int arr[]) {
 		int n = arr.length;
 		for (int i = 0; i < n; ++i)
 			System.out.print(arr[i] + " ");
 		System.out.println();
 	}
-	
 
 	// ***************************** Insertion Sorts *****************************
 	public void insertionSort(int[] arr) {
@@ -37,6 +37,34 @@ public class Sorts {
 	}
 
 	// ***************************** Merge Sort *****************************
+
+	// advanced quick
+	public void advancedMerge(int a[]) {
+		int low = 0;
+		int i;
+		int high = a.length;
+		int mid = (high + low) / 2;
+		if (a.length < 2) {
+			return;
+		} 
+		if (high <= low + CUTOFF) { // this is the same as the merge sort but mixed with the insertion sort when
+									// high is lower than the cut off
+			insertionSort(a);
+			return;
+		}
+		else {
+			int[] left = new int[mid];
+			int[] right = new int[high - mid];
+			for (i = 0; i < mid; i++)
+				left[i] = a[i];
+			for (int j = 0; j < high - mid; j++, i++)
+				right[j] = a[i];
+			mergeSort(left);
+			mergeSort(right);
+			merge(left, right, a);
+		}
+	}
+
 	public void mergeSort(int[] a) {
 		int low = 0;
 		int i;
@@ -90,7 +118,8 @@ public class Sorts {
 
 	// advanced quick
 	public void advancedQuickSort(int array[], int low, int high) {
-		if (high <= low + CUTOFF) { //this is the same as the quick sort but mixed with the insertion sort when high is lower than the cut ff
+		if (high <= low + CUTOFF) { // this is the same as the quick sort but mixed with the insertion sort when
+									// high is lower than the cut ff
 			insertionSort(array);
 			return;
 		}
