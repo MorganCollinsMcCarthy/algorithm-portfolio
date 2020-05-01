@@ -9,7 +9,6 @@ import algorithmPortfolio20290MorganCollinsMcCarthy.Lab8.Trie;
 import algorithmPortfolio20290MorganCollinsMcCarthy.Lab8.Trie.TrieNode;
 import algorithmPortfolio20290MorganCollinsMcCarthy.lab7.search;
 import algorithmPortfolio20290MorganCollinsMcCarthy.Lab1.RussianMultiplication;
-import algorithmPortfolio20290MorganCollinsMcCarthy.Lab2.ThreeSumA;
 import algorithmPortfolio20290MorganCollinsMcCarthy.Lab3.fibonacci;
 
 public class Main {
@@ -20,7 +19,6 @@ public class Main {
 		fibonacci test1 = new fibonacci();
 		search test3 = new search();
 		Trie test4 = new Trie();
-		ThreeSumA test5 = new ThreeSumA();
 		RussianMultiplication test2 = new RussianMultiplication();
 		// ********Testing*******
 
@@ -102,15 +100,15 @@ public class Main {
 
 		// ********Performance*******
 		// Here we can test the runtime of each algorithm.
-		testRussianAlgorithm();
-		testFib();
-		sortTest(0, "Selection Sort");
-		sortTest(1, "Insertion Sort");
-		sortTest(2, "Merge Sort");
-		sortTest(3, "Quick Sort");
-		sortTest(4, "Advanced Quick Sort");
-		testSearch();
-		testKMPSearch();
+//		testRussianAlgorithm();
+//		testFib();
+//		sortTest(0, "Selection Sort");
+//		sortTest(1, "Insertion Sort");
+//		sortTest(2, "Merge Sort");
+//		sortTest(3, "Quick Sort");
+//		sortTest(4, "Advanced Quick Sort");
+//		testSearch();
+//		testKMPSearch();
 	}
 
 	public static int[] newArray() {

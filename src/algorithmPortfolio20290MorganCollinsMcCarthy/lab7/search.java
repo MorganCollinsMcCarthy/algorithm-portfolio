@@ -3,15 +3,12 @@ package algorithmPortfolio20290MorganCollinsMcCarthy.lab7;
 public class search {
 
 	public boolean search(String text, String pat) {
-		int length = text.length();// length of the text
-		int plength = pat.length();// length of the pattern;
-
-		for (int i = 0; i < length - plength; i++) {
+		for (int i = 0; i < text.length() - pat.length(); i++) { //string search
 			int j = 0;
-			while ((j < plength) && (text.charAt(i + j) == pat.charAt(j))) {
-				j++;
+			while ((j < pat.length()) && (text.charAt(i + j) == pat.charAt(j))) {
+				j++; //here we increase the found size while the next char is equal
 			}
-			if (j == plength) {
+			if (j == pat.length()) { //true when the string is found
 				return true;
 			}
 		}

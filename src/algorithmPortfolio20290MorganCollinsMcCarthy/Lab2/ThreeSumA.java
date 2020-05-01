@@ -48,8 +48,11 @@ public class ThreeSumA {
 	 */
 	public static void main(String[] args) {
 		In in = new In(args[0]);
-		int[] a = in.readAllInts();
-		int count = count(a);
+        int[] a = in.readAllInts();
+    	final long startTime = System.currentTimeMillis(); 
+    	int count = count(a);
+    	final long elapsedTime = System.currentTimeMillis() - startTime;  
+    	System.out.println("the time taken " + elapsedTime); 
 
 	}
 }

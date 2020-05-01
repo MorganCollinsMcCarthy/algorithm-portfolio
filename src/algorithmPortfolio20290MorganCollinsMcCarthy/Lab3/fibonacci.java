@@ -11,6 +11,6 @@ public class fibonacci {
 			fib+= pFib;
 			pFib = tmp;
 		}
-		return fib;
+		return fib; //return the final fib number
 	}
 }

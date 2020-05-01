@@ -90,13 +90,12 @@ public class Sorts {
 
 	// advanced quick
 	public void advancedQuickSort(int array[], int low, int high) {
-		if (high <= low + CUTOFF) {
+		if (high <= low + CUTOFF) { //this is the same as the quick sort but mixed with the insertion sort when high is lower than the cut ff
 			insertionSort(array);
 			return;
 		}
 		if (low < high) {
 			int pi = partition(array, low, high);
-
 			advancedQuickSort(array, low, pi - 1);
 			advancedQuickSort(array, pi + 1, high);
 		}
