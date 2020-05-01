@@ -1,3 +1,4 @@
+package algorithmPortfolio20290MorganCollinsMcCarthy.Lab4and5and6;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -8,80 +9,22 @@ import java.util.Random;
  */
 
 public class Sorts {
-	private static Random r = new Random(System.currentTimeMillis());
+	public static Random r = new Random(System.currentTimeMillis());
 	static final int CUTOFF = 10;
-
-	public static void main(String args[]) {
-		Sorts test = new Sorts();
-		int[] s = { 2, 1, 5, 6, 7, 8 };
-		printArray(s);
-
-		test.mergeSort(s);
-		printArray(s);
-
-		// System.out.println("running main");
-//		//use an integer variable to decide which sorting algorithm to use below
-//		int type = 0; 
-//			
-//		///adjust input size to vary size of arrays
-//		for (int inputSize = 1; inputSize < 10; inputSize++) {
-//
-//			//vary total Runs to give you many empirical tests
-//			System.out.print("inputSize:" + inputSize);
-//			
-//			int totalRuns = 1000;
-//			System.out.print(" | total runs:" + totalRuns); 
-//		    
-//
-//			long totalruntime = 0;
-//
-//			for (int run = 0; run < totalRuns; run++) {
-//				int[] nums = new int[inputSize];
-//				
-//				for (int i = 0; i < nums.length; i++) {
-//					nums[i] = r.nextInt(5 * inputSize);
-//				}
-//				
-//				long time = System.nanoTime();
-//
-//				switch (type) {
-//					case 0:
-//					//selectionsort algorithm
-//				     selectionSort(nums);
-//					break;
-//					
-//					case 1:
-//					//insertsort algorithm
-//					insertionSort(nums);
-//					break;
-//					
-//					case 2:
-//					//some silly algorithm
-//					break;
-//					
-//					default:
-//						System.err.printf("\nBad sort ID '%d'", type);
-//						System.exit(-2);
-//				}
-//				totalruntime += System.nanoTime() - time;
-//			}
-//			//printout runtime.
-//			System.out.println(" | total run time:" + totalruntime);
-//		}
-	}
 
 	// ********print helper class*****
 	// Prints the input array
-	private static void printArray(int arr[]) {
+	
+	public void print(int arr[]) {
 		int n = arr.length;
 		for (int i = 0; i < n; ++i)
 			System.out.print(arr[i] + " ");
 		System.out.println();
 	}
+	
 
 	// ***************************** Insertion Sorts *****************************
-	public static void insertionSort(int[] arr) {
-		System.out.println("Insertion Sort");
+	public void insertionSort(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int valueToSort = arr[i];
 			int j = i;
@@ -91,7 +34,6 @@ public class Sorts {
 			}
 			arr[j] = valueToSort;
 		}
-		printArray(arr);
 	}
 
 	// ***************************** Merge Sort *****************************
@@ -192,7 +134,7 @@ public class Sorts {
 
 	// ***************************** Selection Sort ****************************
 
-	public static void selectionSort(int[] nums) {
+	public void selectionSort(int[] nums) {
 		int minindex;
 		for (int i = 0; i < nums.length - 1; i++) {
 			minindex = i;

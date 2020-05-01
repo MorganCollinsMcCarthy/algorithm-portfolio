@@ -1,3 +1,4 @@
+package algorithmPortfolio20290MorganCollinsMcCarthy.Lab8;
 
 public class Trie {
 
@@ -5,12 +6,12 @@ public class Trie {
 	static final int ALPHABET_SIZE = 26;
 
 // class for Trie node 
-	static class TrieNode {
+	public static class TrieNode {
 		TrieNode[] children = new TrieNode[ALPHABET_SIZE];
 // isEndOfWord is true if the node represents end of a word i.e. leaf node
 		boolean isEndOfWord;
 
-		TrieNode() {
+		public TrieNode() {
 			isEndOfWord = false;
 
 			for (int i = 0; i < ALPHABET_SIZE; i++)
@@ -18,12 +19,12 @@ public class Trie {
 		}
 	}
 
-	static TrieNode root;
+	public static TrieNode root;
 
 // If not key present, inserts into trie 
 // If the key is prefix of Trie node,  
 //  marks leaf node
-	static void insert(String key) {
+	public static void insert(String key) {
 		int i;
 		TrieNode node = root;
 
@@ -37,7 +38,7 @@ public class Trie {
 	}
 
 // Returns true if key presents in trie, else false 
-	static boolean search(String key) {
+	public static boolean search(String key) {
 		int i;
 		TrieNode node = root;
 
@@ -47,37 +48,7 @@ public class Trie {
 				return false;
 
 			node = node.children[i];
-
 		}
-
 		return (node.isEndOfWord && node != null);
-
 	}
-
-// Driver 
-	public static void main(String args[]) {
-
-// Input keys (use only 'a' through 'z' and lower case) 
-		String keys[] = { "bank", "book", "bar", "bring", "film", "filter", "simple", "silt", "silver" };
-
-		String output[] = { "Not present in trie", "Present in trie" };
-
-		root = new TrieNode();
-
-// Construct trie 
-		int i;
-		for (i = 0; i < keys.length; i++) {
-			insert(keys[i]);
-		}
-
-// Search for different keys 
-		if (search("bank") == true)
-			System.out.println(output[1]);
-
-		if (search("hello") == true)
-			System.out.println(output[1]);
-
-	}
-
-//end of class
 }

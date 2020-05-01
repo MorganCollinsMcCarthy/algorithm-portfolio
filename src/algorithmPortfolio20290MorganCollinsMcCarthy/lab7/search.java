@@ -1,5 +1,25 @@
-public class KMPsearch {
-	void KMPSearch(String pat, String txt) {
+package algorithmPortfolio20290MorganCollinsMcCarthy.lab7;
+
+public class search {
+
+	public boolean search(String text, String pat) {
+		int length = text.length();// length of the text
+		int plength = pat.length();// length of the pattern;
+
+		for (int i = 0; i < length - plength; i++) {
+			int j = 0;
+			while ((j < plength) && (text.charAt(i + j) == pat.charAt(j))) {
+				j++;
+			}
+			if (j == plength) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public boolean KMPSearch(String pat, String txt) {
 		int M = pat.length();
 		int N = txt.length();
 
@@ -19,17 +39,15 @@ public class KMPsearch {
 				j++;
 			}
 			if (j == M) {
-				System.out.println("Match found");
-				j = lps[j - 1];
-			}
-			else if (x < N && pat.charAt(j) != txt.charAt(x)) {
+				return true;
+			} else if (x < N && pat.charAt(j) != txt.charAt(x)) {
 				if (j != 0)
 					j = lps[j - 1];
 				else
 					x++;
 			}
 		}
-
+		return false;
 	}
 
 	void computeLPSArray(String pat, int M, int lps[]) {
@@ -61,12 +79,5 @@ public class KMPsearch {
 				}
 			}
 		}
-	}
-
-	// Driver program to test above function
-	public static void main(String args[]) {
-		String txt = "ABABDABACDABABCABAB";
-		String pat = "ABABCABAB";
-		new KMPsearch().KMPSearch(pat, txt);
 	}
 }
