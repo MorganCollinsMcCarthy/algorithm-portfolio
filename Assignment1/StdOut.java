@@ -1,12 +1,4 @@
-package Assignment1;
-/******************************************************************************
- *  Compilation:  javac StdOut.java
- *  Execution:    java StdOut
- *  Dependencies: none
- *
- *  Writes data of various types to standard output.
- *
- ******************************************************************************/
+
 
 
 import java.io.OutputStreamWriter;

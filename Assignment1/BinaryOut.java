@@ -1,17 +1,4 @@
-package Assignment1;
-/******************************************************************************
- *  Compilation:  javac BinaryOut.java
- *  Execution:    java BinaryOut
- *  Dependencies: none
- *
- *  Write binary data to an output stream, either one 1-bit boolean,
- *  one 8-bit char, one 32-bit int, one 64-bit double, one 32-bit float,
- *  or one 64-bit long at a time. The output stream can be standard
- *  output, a file, an OutputStream or a Socket.
- *
- *  The bytes written are not aligned.
- *
- ******************************************************************************/
+
 
 
 import java.io.BufferedOutputStream;

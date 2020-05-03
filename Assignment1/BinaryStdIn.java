@@ -1,15 +1,4 @@
-package Assignment1;
-/******************************************************************************
- *  Compilation:  javac BinaryStdIn.java
- *  Execution:    java BinaryStdIn < input > output
- *  Dependencies: none             
- *  
- *  Supports reading binary data from standard input.
- *
- *  % java BinaryStdIn < input.jpg > output.jpg
- *  % diff input.jpg output.jpg
- *
- ******************************************************************************/
+
 
 
 import java.io.BufferedInputStream;

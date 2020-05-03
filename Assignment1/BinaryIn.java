@@ -1,13 +1,4 @@
-package Assignment1;
-/******************************************************************************
- *  Compilation:  javac BinaryIn.java
- *  Execution:    java BinaryIn input output
- *  Dependencies: none             
- *  
- *  This library is for reading binary data from an input stream.
- *
- *
- ******************************************************************************/
+
 
 
 

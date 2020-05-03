@@ -1,24 +1,4 @@
-package Assignment1;
-/******************************************************************************
- *  Compilation:  javac RunLength.java
- *  Execution:    java RunLength - < input.txt   (compress)
- *  Execution:    java RunLength + < input.txt   (expand)
- *  Dependencies: BinaryIn.java BinaryOut.java
- *
- *  Compress or expand binary input from standard input using
- *  run-length encoding.
- *
- *  % java BinaryDump 40 < 4runs.bin 
- *  0000000000000001111111000000011111111111
- *  40 bits
- *
- *  This has runs of 15 0s, 7 1s, 7 0s, and 11 1s.
- *
- *  % java RunLength - < 4runs.bin | java HexDump
- *  0f 07 07 0b
- *  4 bytes
- *
- ******************************************************************************/
+
 
 
 /**
