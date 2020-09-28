@@ -52,7 +52,7 @@ Also the total runs per input can be changed by modifying this value.
 int totalRuns = 100;
 ```
 This is useful when dealing with different time complexity algorithms. Higher total runs can result in more accurate results.
-Each test for each algorithm follows a simialar structure and can be modified by chaanging these values
+Each test for each algorithm follows a simialar structure and can be modified by changing these values
 
 ## Authors
 
